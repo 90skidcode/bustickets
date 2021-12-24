@@ -9,6 +9,8 @@ import {
   PlusSmIcon,
   ViewGridIcon,
 } from "@heroicons/react/solid";
+import BusList from './BusList';
+
 
 const sortOptions = [
   { name: "Most Popular", href: "#", current: true },
@@ -192,9 +194,11 @@ function Componet() {
           </Dialog>
         </Transition.Root>
 
-        <main className="max-w-12xl mx-auto px-1 sm:px-12 lg:px-12">
-          <div className="relative  flex items-baseline justify-between pt-5 pb-3 border-b border-gray-200">
-            <div className="max-w-6xl flex">
+        <main className="max-w-12xl mx-auto  lg:px-12">
+          <div className="relative  flex items-baseline justify-between py-2 border-b border-gray-200 flex-col right sm:flex-row">
+            <div className="max-w-12xl sm:w-12xl lg:px-8">
+            <div className="flex items-center -ml-8">
+
               <h4 className="font-bold pr-5">Erode</h4>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -225,8 +229,8 @@ function Componet() {
                 />
               </svg>
 
-              <h4 className="font-bold px-5">
-                25 Dec <br />
+              <h4 className="font-thin px-5 text-sm">
+              <p className="text-xs font-bold text-center flex flex-wrap">25,DEC</p>
                 <p className="text-xs font-thin text-center">Fri</p>
               </h4>
               <svg
@@ -245,9 +249,10 @@ function Componet() {
               </svg>
 
               <button className=""></button>
+              </div>
             </div>
 
-            <div className="flex items-center">
+            <div className="flex w-[100%] justify-end mt-5 mb-5 mr-5">
               <Menu as="div" className="relative inline-block text-left">
                 <div>
                   <Menu.Button className="group inline-flex justify-center text-sm font-normal text-gray-700 hover:text-gray-900">
@@ -316,9 +321,9 @@ function Componet() {
               Products
             </h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-10">
+            <div className="flex space-x-3">
               {/* Filters */}
-              <form className="hidden lg:block">
+              <form className="w-[20%] hidden lg:block">
                 <h3 className="sr-only">Categories</h3>
                 <ul
                   role="list"
@@ -391,9 +396,12 @@ function Componet() {
               </form>
 
               {/* Product grid */}
-              <div className="lg:col-span-3">
+              <div className="w-[80%] ">
                 {/* Replace with your content */}
-                <div className="border-4 border-double border-gray-200 rounded-lg h-96 lg:h-full"></div>
+                <div className="rounded-lg h-96 lg:h-full">
+                   
+                    <BusList></BusList>
+                </div>
                 {/* /End replace */}
               </div>
             </div>
